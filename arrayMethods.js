@@ -52,8 +52,20 @@ console.log(nums.every(num => num % 2 === 0));
 
 // REDUCE()
 
-const numbers = [5, 10, 15];
-const total = numbers.reduce((sum, num) => sum + num,);
+const numbers1 = [5, 10, 15];
+const total = numbers1.reduce((sum, num) => sum + num,);
 console.log(total);
+
+
+
+// SORT()
+
+const numbers = [15, 34, 12, 67];
+const sortedNumbers = [...numbers].sort((a, b) => a - b); // asc order
+console.log(sortedNumbers);
+
+const fruits2 = ['banana', 'Apple', 'kiwi', 'cherry'];
+const sortedFruits = [...fruits2].sort((a, b) => b.toLowerCase().localeCompare(a.toLowerCase()))
+console.log(sortedFruits);
 
 
