@@ -141,9 +141,6 @@
 //   console.log('All the fields filled!');
 // }
 
-
-
-
 // 1 * 1 = 1
 // 1 * 2 = 2
 // 1 * 3 = 3
@@ -155,5 +152,41 @@
 // 2 * 4 = 8
 // 2 * 5 = 10
 
+// for (let first = 1; first <= 5; first++) {
+//   for (let second = 1; second <= 5; second++) {
+//     console.log(`${first} X ${second} = ${first * second}`);
+//   }
+// }
 
-//  
+
+
+
+
+// Reversed string (FOR LOOP)
+// let str = 'JavaScript';
+// let reversed = '';
+
+// for (let i = str.length - 1; i >= 0; i--) {
+//   reversed += str[i];
+// }
+
+// console.log(reversed);
+
+
+
+
+// LOOP in a LOOP
+
+
+// const aliceFood = ['pizza', 'potato', 'carrot', 'cake'];
+// const tomFood = ['pizza', 'burger', 'sushi', 'cake'];
+
+// for (let i = 0; i < aliceFood.length; i++) {
+//   for (let j = 0; j < tomFood.length; j++) {
+//     if (aliceFood[i] === tomFood[j]) {
+//       console.log(`Оба любят: ${aliceFood[i]}`);
+//     }
+//   }
+// }
+
+
