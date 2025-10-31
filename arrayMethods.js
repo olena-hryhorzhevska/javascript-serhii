@@ -99,3 +99,17 @@
 
 
 
+
+
+// function groupByLength(worlds) {
+//   let res = {}
+//   for (let i = 0; i < worlds.length; i++)
+//   {
+//     let length = worlds[i].length
+//     if (!res[length]) { res[length] = [] } res[length].push(worlds[i])
+//   } return res
+// }
+// console.log(groupByLength(["cat", "apple", "dog", "pear", "hi"]));
+
+
+
