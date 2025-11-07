@@ -33,34 +33,34 @@
 
 
 
-function countByCategory(products) {
-  const counts = {};
+// function countByCategory(products) {
+//   const counts = {};
 
-  for (let product of products) {
-    const category = product.category;
-    counts[category] = (counts[category] || 0) + 1;
+//   for (let product of products) {
+//     const category = product.category;
+//     counts[category] = (counts[category] || 0) + 1;
 
-                            //undefined
-    // counts['Fruits'] = (counts['Fruits'] || 0) + 1
+//                             //undefined
+//     // counts['Fruits'] = (counts['Fruits'] || 0) + 1
 
-    // counts['Fruits'] = (1 || 0) + 1 = 2
-  }
+//     // counts['Fruits'] = (1 || 0) + 1 = 2
+//   }
 
-  return counts;
-}
+//   return counts;
+// }
 
-const products = [
-  { name: "Apple", category: "Fruits" },
-  { name: "Banana", category: "Fruits" },
-  { name: "Carrot", category: "Vegetables" },
-  { name: "Broccoli", category: "Vegetables" },
-  { name: "Milk", category: "Dairy" },
-];
+// const products = [
+//   { name: "Apple", category: "Fruits" },
+//   { name: "Banana", category: "Fruits" },
+//   { name: "Carrot", category: "Vegetables" },
+//   { name: "Broccoli", category: "Vegetables" },
+//   { name: "Milk", category: "Dairy" },
+// ];
 
-console.log(countByCategory(products));
-// 👉 { Fruits: 2, Vegetables: 2, Dairy: 1 }
+// console.log(countByCategory(products));
+// // 👉 { Fruits: 2, Vegetables: 2, Dairy: 1 }
 
 
-let fruits;
+// let fruits;
 
-console.log( typeof fruits);
+// console.log( typeof fruits);
