@@ -111,27 +111,118 @@
 
 
 
-class Car {
-  constructor(model, price) {
-    this.model = model;
-    this.price = price;
-  }
+// class Car {
+//   constructor(model, price) {
+//     this.model = model;
+//     this.price = price;
+//   }
 
-  getInfo() {
-    console.log(`${this.model} costs ${this.price}`); 
-  }
+//   getInfo() {
+//     console.log(`${this.model} costs ${this.price}`); 
+//   }
 
-  static compare(car1, car2) {
-    return car1.price - car2.price
-  }
-}
+//   static compare(car1, car2) {
+//     return car1.price - car2.price
+//   }
+// }
 
-const bmw = new Car('BMW', '30000');
-const audi = new Car('Audi', '3500');
+// const bmw = new Car('BMW', '30000');
+// const audi = new Car('Audi', '3500');
 
-console.log(bmw);
-bmw.getInfo()
+// console.log(bmw);
+// bmw.getInfo()
 
-console.log(Car.compare(bmw, audi));
+// console.log(Car.compare(bmw, audi));
 
 
+
+// ❗️Приватность 
+
+// class User {
+//   static #takenEmails = [];
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+//   constructor(params) {
+//     this.#email = params.email;
+//     User.#takenEmails.push(params.email);
+//   }
+// }
+
+// const mango = new User({
+//   email: 'mango@gmail.com'
+// })
+
+// console.log(mango);
+
+// console.log(User.isEmailTaken('pole@gamil'));
+// console.log(User.isEmailTaken('mango@gmail.com'));
+
+
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// const user = new User('Serhii');
+// console.log(user.name);
+
+// user.name = 'Anna'
+// console.log(user.name);
+
+
+
+// class User {
+//   #password; // private
+
+//   constructor(name, password) {
+//     this.name = name;
+//     this.#password = password;
+//   }
+//   checkPassword(pass) {
+//     return this.#password === pass;
+//   }
+// }
+
+// const user = new User('Serhii', '123');
+// console.log(user.checkPassword('123'));
+
+
+
+
+// class User {
+//   static roles = {
+//     admin: 'admin',
+//     editor: 'editor',
+//     basic: 'basic'
+//   }
+
+//   #email;
+//   #role;
+
+//   constructor(params) {
+//     this.#email = params.email;
+//     this.#role = params.role || User.roles.basic;
+//   }
+
+//   get role() {
+//     return this.#role;
+//   }
+
+//   set role (newRole) {
+//     this.#role = newRole;
+//   }
+// }
+
+// const alice = new User({
+//   email: 'alice@gamil.com',
+//   role: User.roles.admin,
+// })
+
+// console.log(alice.role);
+// alice.role = User.roles.basic;
+// console.log(alice.role);
