@@ -1,4 +1,3 @@
-
 // ❗️Prototypes
 // const animal = {
 //   eats: true,
@@ -14,8 +13,6 @@
 // console.log(dog.eats);
 
 // [[Prototype]]
-
-
 
 // ❗️Class
 
@@ -35,9 +32,6 @@
 // cat1.meow();
 // cat2.meow();
 
-
-
-
 // ❗️Наследование EXTENDS
 
 // class Animal {
@@ -48,7 +42,7 @@
 
 // class Dog extends Animal {
 //   bark() {
-//     console.log('Dog barks!'); 
+//     console.log('Dog barks!');
 //   }
 // }
 
@@ -57,7 +51,6 @@
 
 // rex.bark()
 // rex.eat();
-
 
 // ❗️SUPER
 
@@ -82,8 +75,6 @@
 // console.log(dog);
 // dog.info();
 
-
-
 // ❗️Getter / Setter
 
 // class Temperature {
@@ -107,10 +98,6 @@
 // console.log(temp.celsius.toFixed(1));
 // console.log(temp);
 
-
-
-
-
 // class Car {
 //   constructor(model, price) {
 //     this.model = model;
@@ -118,7 +105,7 @@
 //   }
 
 //   getInfo() {
-//     console.log(`${this.model} costs ${this.price}`); 
+//     console.log(`${this.model} costs ${this.price}`);
 //   }
 
 //   static compare(car1, car2) {
@@ -134,9 +121,7 @@
 
 // console.log(Car.compare(bmw, audi));
 
-
-
-// ❗️Приватность 
+// ❗️Приватность
 
 // class User {
 //   static #takenEmails = [];
@@ -160,8 +145,6 @@
 // console.log(User.isEmailTaken('pole@gamil'));
 // console.log(User.isEmailTaken('mango@gmail.com'));
 
-
-
 // class User {
 //   constructor(name) {
 //     this.name = name;
@@ -173,8 +156,6 @@
 
 // user.name = 'Anna'
 // console.log(user.name);
-
-
 
 // class User {
 //   #password; // private
@@ -190,9 +171,6 @@
 
 // const user = new User('Serhii', '123');
 // console.log(user.checkPassword('123'));
-
-
-
 
 // class User {
 //   static roles = {
@@ -226,3 +204,127 @@
 // console.log(alice.role);
 // alice.role = User.roles.basic;
 // console.log(alice.role);
+
+// class dog: input: type, name, birth_date
+// method1: greeting - i am ... and my age is ... return str
+// method2: return age return int
+// method3: is_birthday return 1/0
+
+// class Account {
+//   static #registeredEmails = [];
+
+//   static isEmailTaken(email) {
+//     return this.#registeredEmails.includes(email);
+//   }
+
+//   #email;
+//   #password;
+
+//   constructor(email, password) {
+//     if (Account.isEmailTaken(email)) throw new Error('Email taken');
+//     this.#email = email;
+//     Account.#registeredEmails.push(email);
+
+//     this.password = password; // setter
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set password(newPass) {
+//     if (newPass.length < 6) throw new Error('Short password');
+//     this.#password = newPass;
+//   }
+
+//   checkPassword(pass) {
+//     return this.#password === pass;
+//   }
+// }
+
+// // Создаем пользователя
+// const a1 = new Account('test@mail.com', '123456');
+// console.log(a1.email); // 'test@mail.com'
+
+// // Проверяем пароль
+// console.log(a1.checkPassword('123456')); // true
+// console.log(a1.checkPassword('wrong'));  // false
+
+// // Проверяем занят ли email
+// console.log(Account.isEmailTaken('test@mail.com')); // true
+// console.log(Account.isEmailTaken('free@mail.com')); // false
+
+// // Меняем пароль через setter
+// a1.password = 'newPass123';
+// console.log(a1.checkPassword('newPass123')); // true
+
+// // Попытка создать аккаунт с занятым email
+// try {
+//   const a2 = new Account('test@mail.com', '111111');
+// } catch (e) {
+//   console.log(e.message); // 'Email taken'
+// }
+
+// // Слишком короткий пароль (setter)
+// try {
+//   a1.password = '123';
+// } catch (e) {
+//   console.log(e.message); // 'Short password'
+// }
+
+// call, bind, apply
+// function showName() {
+//   console.log(this.name + 'hello');
+// }
+
+// const user = { name: "Serhii" }
+
+// showName(); // this = undefined
+
+// CALL Вызывает функцию сразу = передает аргументы через запятую
+// APPLY Вызывает функцию сразу = передает аргументы массив
+// BIND Вызывает функцию НЕ сразу = возвращает новую функцию, которую можно вызвать позже
+
+// ❗️CALL
+// function greet(city) {
+//   console.log(`Hello, I am ${this.name} from ${city}`);
+// }
+
+// const user = { name: 'Lera' }
+// greet.call(user, "Toronto");
+
+// ❗️APPLY
+// function sum(a, b, c) {
+//   console.log(a + b + c);
+// }
+
+// sum.apply(null, [1, 2, 3])
+
+// ❗️BIND
+
+// const user = {
+//   name: 'Valeriy'
+// }
+
+// function greet() {
+//   console.log(`Hello, I am ${this.name}`);
+// }
+
+// const fn = greet.bind(user);
+// fn();
+
+// class Formatter {
+//   static print() {
+//     console.log(`${this.title}: ${this.price}$`);
+//   }
+// }
+
+// class Product {
+//   constructor(title, price) {
+//     this.title = title;
+//     this.price = price;
+//   }
+// }
+
+// const phone = new Product('Iphone', 9999);
+// Formatter.print.call(phone)
