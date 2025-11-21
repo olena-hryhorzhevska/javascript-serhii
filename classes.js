@@ -328,3 +328,102 @@
 
 // const phone = new Product('Iphone', 9999);
 // Formatter.print.call(phone)
+
+
+
+
+
+// "use strict";
+
+// const customer = {
+//   username: "Jacob",
+// 	sayHello() {
+// 		console.log(`Hello, ${this.username}!`);
+//   }
+// };
+
+// customer.sayHello(); // "Hello, Jacob!"
+
+// const greet = customer.sayHello;
+
+// greet(); // TypeError: Cannot read properties of undefined (reading 'username')
+
+
+
+// const obj = {
+//   a: 10,
+//   getA() {
+//     return this.a;
+//   }
+// }
+
+// console.log(obj.b);
+
+
+
+
+
+
+
+// "use strict";
+
+// const customer = {
+//   username: "Jacob",
+// 	sayHello() {
+// 		console.log(`Hello, ${this.username}!`);
+//   }
+// };
+
+// customer.sayHello(); // "Hello, Jacob!"
+
+// const greet = customer.sayHello.bind(customer);
+
+// greet(); // "Hello, Jacob!"
+
+
+
+
+
+
+
+"use strict";
+
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Mercer",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// };
+
+// function makeMessage(callback) {
+//   // callback() — це виклик методу getFullName в глобальному контексті
+//   const username = callback();
+//   console.log(`Processing an application from ${username}`);
+// }
+
+// makeMessage(customer.getFullName); // TypeError: Cannot read properties of undefined (reading 'firstName')
+
+
+
+const customer = {
+  firstName: "Jacob",
+  lastName: "Mercer",
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+
+function makeMessage(callback) {
+	const username = callback();
+	console.log(`Processing an application from ${username}`);
+}
+
+makeMessage(customer.getFullName.bind(customer)); // "Processing an application from Jacob Mercer"
+
+
+
+
+
+
+
