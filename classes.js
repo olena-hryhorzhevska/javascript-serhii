@@ -406,24 +406,72 @@
 
 
 
-const customer = {
-  firstName: "Jacob",
-  lastName: "Mercer",
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Mercer",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function makeMessage(callback) {
+// 	const username = callback();
+// 	console.log(`Processing an application from ${username}`);
+// }
+
+// makeMessage(customer.getFullName.bind(customer)); // "Processing an application from Jacob Mercer"
+
+
+
+
+
+
+
+
+
+
+
+
+/*Задача 1.
+У Вас есть объект order с методом printStatus, который выводит текст вида:
+Order #ID: STATUS
+
+Вам нужно передать этот метод в функцию runLogger, которая вызывает переданную функцию без контекста.
+Сделайте так, чтобы при выполнении кода корректно вывелось:
+Order #1045: confirmed */
+
+const order = {
+  id: 1045,
+  status: "confirmed",
+  printStatus() {
+    console.log(`Order #${this.id}: ${this.status}`);
   },
 };
 
-function makeMessage(callback) {
-	const username = callback();
-	console.log(`Processing an application from ${username}`);
+function runLogger(logger) {
+  logger();
 }
 
-makeMessage(customer.getFullName.bind(customer)); // "Processing an application from Jacob Mercer"
+runLogger(order.printStatus.bind(order));
 
 
+/*Задача 2.
+Есть функция generateReport, которая принимает массив чисел и должна вывести сумму всех чисел плюс значение this.base.
+Сделайте так, чтобы:
+1. через call был использован объект { base: 50 }
+и результат вывелся как:
+Total: 120
 
+2. через apply был использован объект { base: 10 }
+и результат вывелся как:
+Total: 80 */
 
+function generateReport(arrNum) {
+  const sum = arrNum.reduce((acc, num) => acc + num, 0);
+  console.log(`Total ${sum + this.base}`);
+}
 
+const numbers = [20, 30, 10, 10];
 
-
+generateReport.call({ base: 50 }, numbers);
+generateReport.apply({ base: 10 }, [numbers]);
