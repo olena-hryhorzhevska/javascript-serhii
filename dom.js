@@ -6,7 +6,7 @@
 // text = text node (текстовые узлы)
 
 
-console.log(document);
+// console.log(document);
 
 // ❗️Query Selector
 
@@ -90,4 +90,60 @@ console.log(document);
 //     button.style.color = 'white';
 //     button.style.border = '2px solid darkred';
 //   }
+// })
+
+
+
+
+
+
+
+// textContent 
+
+// const hello = document.querySelector('.parag');
+// console.log(hello);
+// console.log(hello.textContent);
+
+
+
+// Atributes
+
+// const img = document.querySelector('.photoclass');
+// console.log(img);
+// console.log(img.hasAttribute('src')) // true
+// console.log(img.getAttribute('alt')) // Profile photo
+// img.setAttribute('alt', "New Profile")
+// console.log(img.getAttribute('alt'));
+// img.removeAttribute('alt')
+// console.log(img.hasAttribute('alt'));
+
+
+
+// Data-action
+
+// const btn = document.querySelector('.savebtn');
+// console.log(btn.dataset.action);
+// btn.dataset.action = 'update'
+// console.log(btn.dataset.action);
+// btn.dataset.role = 'admin'
+// console.log(btn.dataset.role);
+
+
+
+// TextContent AND InnerHTML
+
+// const box = document.getElementById('box')
+// console.log(box);
+
+// box.textContent = "<b>Hi</b>"
+// console.log(box);
+
+
+// box.innerHTML = '<b>Hi</b>';
+
+
+// const btn = document.getElementById('update');
+// const items = document.querySelectorAll('#list li');
+// btn.addEventListener('click', () => {
+//   items.forEach(li => li.textContent = 'Updated')
 // })

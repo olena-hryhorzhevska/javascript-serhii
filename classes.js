@@ -440,19 +440,19 @@ Order #ID: STATUS
 Сделайте так, чтобы при выполнении кода корректно вывелось:
 Order #1045: confirmed */
 
-const order = {
-  id: 1045,
-  status: "confirmed",
-  printStatus() {
-    console.log(`Order #${this.id}: ${this.status}`);
-  },
-};
+// const order = {
+//   id: 1045,
+//   status: "confirmed",
+//   printStatus() {
+//     console.log(`Order #${this.id}: ${this.status}`);
+//   },
+// };
 
-function runLogger(logger) {
-  logger();
-}
+// function runLogger(logger) {
+//   logger();
+// }
 
-runLogger(order.printStatus.bind(order));
+// runLogger(order.printStatus.bind(order));
 
 
 /*Задача 2.
@@ -466,12 +466,12 @@ Total: 120
 и результат вывелся как:
 Total: 80 */
 
-function generateReport(arrNum) {
-  const sum = arrNum.reduce((acc, num) => acc + num, 0);
-  console.log(`Total ${sum + this.base}`);
-}
+// function generateReport(arrNum) {
+//   const sum = arrNum.reduce((acc, num) => acc + num, 0);
+//   console.log(`Total ${sum + this.base}`);
+// }
 
-const numbers = [20, 30, 10, 10];
+// const numbers = [20, 30, 10, 10];
 
-generateReport.call({ base: 50 }, numbers);
-generateReport.apply({ base: 10 }, [numbers]);
+// generateReport.call({ base: 50 }, numbers);
+// generateReport.apply({ base: 10 }, [numbers]);
