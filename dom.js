@@ -147,3 +147,93 @@
 // btn.addEventListener('click', () => {
 //   items.forEach(li => li.textContent = 'Updated')
 // })
+
+
+
+
+// ❗️Checked - не текст, а true or false
+
+// const agree = document.getElementById('agree');
+// const log = document.getElementById('log');
+
+// agree.addEventListener('change', () => {
+//   log.textContent = agree.checked ? "Checked" : "Not checked"
+// })
+
+
+// Делегирование событий
+// const list = document.getElementById('list');
+// const log = document.getElementById('log');
+
+// list.addEventListener("click", (event) => {
+//   console.log(event.target);
+  
+//   if (event.target.classList.contains('item')) {
+//     log.textContent = "Clicked " + event.target.textContent
+//   }
+// })
+
+
+
+// ❗️ParentElement
+
+// const btn = document.getElementById('btn');
+// const parent = btn.parentElement
+// console.log(parent);
+
+
+// ❗️Children
+
+// const menu = document.getElementById('menu');
+// console.log(menu.children);
+// console.log(menu.children[1].textContent);
+
+
+// ❗️Siblings
+
+// const second = document.getElementById('second');
+
+// console.log(second.previousElementSibling.textContent);
+// console.log(second.nextElementSibling.textContent);
+
+
+// const third = document.getElementById('third');
+// console.log(third.nextElementSibling.textContent);
+
+
+// ❗️insertAdjacentHTML()
+
+// beforebegin - перед элементом
+// afterbegin - внутрь в начало
+// beforeend - внутрь в конец
+// afterend - после элемента
+
+
+// const menu = document.getElementById('menu')
+// menu.insertAdjacentHTML('beforeend', "<li>About</li>")
+// menu.insertAdjacentHTML('afterbegin', '<li>Start</li>');
+// menu.insertAdjacentHTML('afterend', '<p>Menu ended</p>');
+
+
+// ❗️createElement() + append / prepend / before / after
+
+// menu.innerHTML += '<li>About</li>';
+
+// const li = document.createElement('li');
+// const li2 = document.createElement('li');
+// li2.textContent = "textContent";
+// li.textContent = "Created with create element"
+// menu.appendChild(li, li2) ❌
+
+// menu.append(li1, li2, 'Text node'); ✅
+// menu.append('Hello'); ✅
+
+// menu.appendChild('Hello'); ❌
+
+
+// menu.append(document.createElement('li'),
+//   document.createElement('li'),
+// 'Some text')
+
+
+
