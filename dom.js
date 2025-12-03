@@ -237,3 +237,79 @@
 
 
 
+// element.addEventListener(event, handler, options (capture, once, passive))
+// removeEventListener(event, handler, options)
+
+
+// ❌
+
+// button.addEventListener('click', () => {
+//   console.log('Clicked');
+// });
+
+// button.removeEventListener('click', handler); // ❌ не сработает, т.к. функция анонимная
+
+
+
+// Keydown, Keyup, key vs code (event.key, event.code)
+// KeyA
+// Digit1
+// Enter
+// ArrowUp
+
+
+// const keySpan = document.getElementById('key');
+// const codeSpan = document.getElementById('code');
+
+// document.addEventListener('keydown', (event) => {
+//   console.log("keydown event:", event);
+//   keySpan.textContent = event.key;
+//   codeSpan.textContent = event.code;
+// })
+
+
+
+// ❗️Form Events - submit, change, input
+// const loginForm = document.getElementById('login-form');
+
+// loginForm.addEventListener("submit", (event) => {
+//   event.preventDefault(); // отменяет стандартное поведение браузера
+
+//   const form = event.target;
+//   const login = form.elements.login.value;
+//   const password = form.elements.password.value;
+
+//   console.log(`Login: ${login}, Password: ${password}`);
+  
+// })
+
+
+// ❗️Change Event
+
+// const select = document.querySelector('.pizza-select');
+// const textOutput = document.querySelector('.text-output');
+// const valueOutput = document.querySelector('.value-output');
+
+// select.addEventListener('change', (event) => {
+  
+//   const selectedOption = event.currentTarget.value;
+//   const selectedOptionIndex = event.currentTarget.selectedIndex; 
+//   const selectedOptionText = event.currentTarget.options[selectedOptionIndex].text;
+
+//   textOutput.textContent = selectedOptionText;
+//   valueOutput.textContent = selectedOption;
+
+//   console.log(event.currentTarget.value); // pepperoni (то, что было выбрано и прописано в value)
+
+// })
+
+
+// ❗️Input Event
+
+// const bio = document.getElementById('bio');
+// const count = document.getElementById('count');
+
+// bio.addEventListener('input', (event) => {
+//   const length = bio.value.length
+//   count.textContent = length;
+// })
