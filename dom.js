@@ -291,6 +291,8 @@
 // const valueOutput = document.querySelector('.value-output');
 
 // select.addEventListener('change', (event) => {
+
+
   
 //   const selectedOption = event.currentTarget.value;
 //   const selectedOptionIndex = event.currentTarget.selectedIndex; 
@@ -312,4 +314,115 @@
 // bio.addEventListener('input', (event) => {
 //   const length = bio.value.length
 //   count.textContent = length;
+// })
+
+
+// ❗️Focus and Blur Events
+// const input = document.getElementById('name');
+
+// input.addEventListener('focus', () => {
+//   console.log('Input focused');
+//   input.style.backgroundColor = 'lightyellow';
+// })
+
+// input.addEventListener('blur', () => {
+//   console.log('Input blurred');
+//   input.style.backgroundColor = '';
+// })
+
+// ❗️Focusin and Focusout
+
+// const form = document.getElementById('login-form');
+
+// form.addEventListener('focusin', (event) => {
+//   console.log('Focusin event on:', event.target);
+//   event.target.style.backgroundColor = 'lightblue';
+// })
+
+// form.addEventListener('focusout', (event) => {
+//   console.log('Focusout event on:', event.target);
+//   event.target.style.backgroundColor = '';
+// })
+
+
+
+
+// ❗️Load Event
+// window.addEventListener('load', () => {
+//   console.log('All resources finished loading!');
+// })
+
+
+
+// ❗️Resize Event
+// window.addEventListener('resize', () => {
+//   console.log(`Window resized to ${window.innerWidth} x ${window.innerHeight}`);
+// })
+
+
+// ❗️Scroll Event
+// window.addEventListener('scroll', () => {
+//   console.log(`Scrolled to ${window.scrollY}px vertically`);
+// })
+
+
+// ❗️Mouse Events
+// const btn = document.getElementById('btn');
+
+// btn.addEventListener('mousedown', (event) => {
+//   console.log('Mousedown:', event.button);
+// })
+
+// btn.addEventListener('mouseup', (event) => {
+//   console.log('Mouseup:', event.button);
+// })
+
+
+// ❗️Mousemove
+// const area = document.getElementById('area');
+// const coords = document.getElementById('coords');
+
+// area.addEventListener('mousemove', (event) => {
+//   coords.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
+// })
+
+
+
+// ❗️MouseEnter and MouseLeave - всплытие не происходит
+
+// const card = document.getElementById('card');
+
+// card.addEventListener('mouseenter', () => {
+//   card.style.backgroundColor = 'lightgray';
+//   console.log('Курсор вошел в область карточки');
+// })
+
+// card.addEventListener('mouseleave', () => {
+//   card.style.backgroundColor = '';
+//   console.log('Курсор покинул область карточки');
+// }
+// )
+
+
+// const box = document.getElementById('box');
+// box.addEventListener('mouseenter', () => {
+//   box.style.backgroundColor = 'lightgreen';
+//   console.log('Курсор вошел в область бокса');
+// })
+
+// box.addEventListener('mouseleave', () => {
+//   box.style.backgroundColor = '';
+//   console.log('Курсор покинул область бокса');
+// })
+
+// ❗️MouseOver and MouseOut - всплытие происходит
+
+// const container = document.getElementById('container');
+
+// container.addEventListener('mouseover', (event) => {
+//   console.log('Mouseover on:', event.target.id);  
+// })
+
+// container.addEventListener('mouseout', (event) => {
+//   console.log('Mouseout from:', event.target.id, 'relatedTarget: ', event.relatedTarget.id);
 // })
