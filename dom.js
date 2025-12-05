@@ -426,3 +426,24 @@
 // container.addEventListener('mouseout', (event) => {
 //   console.log('Mouseout from:', event.target.id, 'relatedTarget: ', event.relatedTarget.id);
 // })
+
+
+// ❗️Closest(selector)
+
+// const list = document.querySelector('.todo-list');
+
+// list.addEventListener('click', (event) => {
+//   if (event.target.matches('.delete-btn')) {
+//     const item = event.target.closest('.todo-item');
+//     item.remove();
+//   }
+// })
+
+
+// ❗️:nth-child(n)
+
+// const evenItems = document.querySelectorAll('li:nth-child(2)');
+// evenItems.forEach(item => {
+//   item.style.backgroundColor = 'lightgray';
+// })
+
