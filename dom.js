@@ -449,3 +449,80 @@
 // button.addEventListener('click', (event) => {
 //   console.log('Third item');
 // });
+
+
+
+// const user = {
+//   name: 'Alice',
+//   age: 30,
+// }
+
+// const { name: surname, age } = user;
+// console.log(surname);
+// console.log(age)
+
+// const book = {
+//   title: 'JavaScript Basics',
+// }
+
+// const { title, author = 'Unknown' } = book;
+// console.log(title);
+// console.log(author);
+
+
+
+// const rgb = [255, 0, 127];
+// const [r, g, b] = rgb;
+// console.log(r, g, b);
+
+// const arr = [10, 20, 30, 40];
+// const [first, , third] = arr;
+// console.log(first, third);
+
+// const arr1 = [1];
+// const [a, f = 99] = arr1;
+// console.log(a, f);
+
+// const nums = [5, 10, 15, 20];
+// const [firstNum, ...restNums] = nums;
+// console.log(firstNum, restNums);
+
+
+// const user = {
+//   name: "Alex",
+//   age: 25,
+//   city: "New York",
+//   role: 'admin',
+// }
+
+
+// const { name, age, ...rest } = user;
+// console.log(name, age);
+// console.log(rest);
+
+
+
+// const user = {
+//   name: "Alex",
+//   stats: {
+//     followers: 100,
+//     views: 2000,
+//     likes: 500,
+//   }
+// }
+
+// const { name, stats: { followers, views, likes } } = user;
+
+// console.log(name);
+// // console.log(stats); // ❌ ReferenceError: stats is not defined
+// console.log(followers, likes, views);
+
+
+
+
+
+
+
+
+
+
