@@ -56,7 +56,7 @@
 // }
 
 // start();
-// setTimeout(cancel, 3000);
+// setTimeout(cancel, 1000);
 
 
 // setInterval
@@ -123,4 +123,3 @@
 // console.log(1000 * 60 * 60 * 24);
 // const diffInDays = diff / (1000 * 60 * 60 * 24);
 // console.log(`Days between: ${diffInDays}`);
-
