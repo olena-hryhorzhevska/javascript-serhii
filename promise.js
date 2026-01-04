@@ -1,5 +1,3 @@
-
-
 // const data = fetchData();
 // console.log(data);
 
@@ -196,11 +194,8 @@
 //   .then(greeting => console.log(greeting))
 //   .catch(error => console.log('Ошибка:', error));
 
-
 // Работа с несколькими промисами
 // Promise.all, Promise.allSettled, Promise.race
-
-
 
 // ❗️Promise.all
 // Promise.all([promise1, promise2, promise3])
@@ -220,11 +215,9 @@
 //   console.log('Один из промисов отклонен:', error);
 // })
 
-
 // const p1 = Promise.resolve('Первый промис выполнен');
 // const p2 = Promise.reject('Второй промис отклонен');
 // const p3 = Promise.resolve('Третий промис выполнен');
-
 
 // Promise.all([p1, p2, p3])
 //   .then(value => {
@@ -234,12 +227,9 @@
 //   console.log('Один из промисов отклонен:', error);
 //   })
 
-
-
 // ❗️Promise.allSettled
 // Promise.allSettled([promise1, promise2, promise3])
 // на выходе массив со статусами и значениями/причинами отклонения и статус промиса fulfilled|
-
 
 // const p1 = Promise.resolve('Первый промис выполнен');
 // const p2 = Promise.reject('Второй промис отклонен');
@@ -255,9 +245,8 @@
 //     const success = results.filter(item => item.status === 'fulfilled')
 //       .map(item => item.value);
 //     console.log('Успешные результаты:', success);
-    
-// })
 
+// })
 
 // ❗️Promise.race()
 // Promise.race([promise1, promise2, promise3])
@@ -275,7 +264,6 @@
 //   }, 1000);
 // })
 
-
 // Promise.race([p1, p2])
 //   .then(value => {
 //   console.log('Первый выполненный промис:', value);
@@ -283,3 +271,6 @@
 //   .catch(error => {
 //   console.log('Один из промисов отклонен:', error);
 // })
+
+
+
