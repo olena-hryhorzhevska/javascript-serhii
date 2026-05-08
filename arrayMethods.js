@@ -6,7 +6,7 @@
 // });
 // console.log(newPrices);
 
-
+//
 // // FILTER
 // const ages = [15, 32, 45, 12, 76];
 // const adults = ages.filter(age => age >= 18);
